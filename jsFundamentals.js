@@ -242,18 +242,187 @@ The function returns an integer denoting the first occurrence of the string x in
 // const pangramCheck = panagram(str);
 // console.log(pangramCheck);
 
-
 // 12. Count Words in String
 
-const str = "Geeks Geeks Geeks"
-let count = 1
+// const str = "Geeks Geeks Geeks"
+// let count = 1
 
-for(let i = 0; i < str.length; i++){
-    if(str[i] == " "){
-        count++
-    }
+// for(let i = 0; i < str.length; i++){
+//     if(str[i] == " "){
+//         count++
+//     }
 
-}
+// }
 
-console.log(count)
+// console.log(count)
 
+// 13. Palindrome String
+
+// function isPalindrome(str){
+//     let reverseStr = str.split("").reverse().join("")
+
+//     if(str === reverseStr){
+//         return 1
+//     } else{
+//         return 0
+//     }
+
+// }
+
+// let str = "abba"
+
+// const checkPalindrome = isPalindrome(str)
+// console.log(checkPalindrome)
+
+// 14. Slice The String
+
+// function sliceTheString(str){
+//     const sliceStr = str.split("").slice(1, -1).join("")
+//     return sliceStr
+
+// }
+
+// let str = "World"
+// const slice = sliceTheString(str)
+// console.log(slice)
+
+// 15. Check if array is sorted
+
+// function arraySortedOrNot(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i - 1] > arr[i]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// const arr = [10, 20, 30, 40, 50];
+// const isArraySorted = arraySortedOrNot(arr);
+// console.log(isArraySorted);
+
+// 16. Search element in an array
+
+// function searchElement(arr, x) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === x) {
+//       return i;
+//     }
+//   }
+
+//   return -1;
+// }
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// const x = 5;
+// const isElementPresent = searchElement(arr, x);
+// console.log(isElementPresent);
+
+// 17. Count the Zeros
+
+// function countTheZeros(arr) {
+//   let count = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) {
+//       count += 1;
+//     }
+//   }
+
+//   return count;
+// }
+
+// const arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0];
+// const totalZeros = countTheZeros(arr);
+// console.log(totalZeros);
+
+// 18. Average
+
+// function averageOfNumbers(arr) {
+//   let sum = 0,
+//     count = 0,
+//     average;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       sum += arr[i];
+//       count += 1;
+//     }
+//   }
+
+//   average = count === 0 ? 0 : Math.floor(sum / count);
+
+//   return average;
+// }
+
+// const arr = [-12, 8, -7, 6, 12, -9, 14];
+// const average = averageOfNumbers(arr);
+// console.log(average);
+
+// 19. Largest element in Array
+
+// function largestElement(arr) {
+//   let max = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+
+//   return max;
+// }
+
+// const arr = [1, 2, 0, 13, 3, 2, 4, 5];
+
+// const largest = largestElement(arr);
+// console.log(largest);
+
+// 20. Remove vowels from String
+
+// function removeVowels(string) {
+//   const vowels = ["a", "e", "i", "o", "u"];
+//   let result = "";
+
+//   for (char of string) {
+//     if (!vowels.includes(char.toLowerCase())) {
+//       result += char;
+//     }
+//   }
+
+//   return result;
+// }
+// const string = "The quick browm fox jumps over the lazy dog";
+// const afterRemovingString = removeVowels(string);
+// console.log(afterRemovingString);
+
+// 21. Mask the last 4 characters with #
+
+// function maskTheCharacter(str, digitsToMask) {
+//   const hash = "#".repeat(digitsToMask);
+//   str = str.slice(0, -digitsToMask) + hash;
+//   return str;
+// }
+
+// const str = "123456789987654321";
+// const digitsToMask = 4;
+// const maskLast4 = maskTheCharacter(str, digitsToMask);
+// console.log(maskLast4);
+
+// 22. Generate secret code from a string
+
+// function encryption(str) {
+//   let charToAscii,
+
+//     finalStr = "";
+//   for (char of str) {
+//     charToAscii = char.charCodeAt() + 2;
+//     finalStr += String.fromCharCode(charToAscii);
+//   }
+
+//   return finalStr
+// }
+
+// const str = "prakash";
+// const encryptedStr = encryption(str);
+// console.log(encryptedStr);
