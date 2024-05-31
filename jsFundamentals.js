@@ -426,3 +426,166 @@ The function returns an integer denoting the first occurrence of the string x in
 // const str = "prakash";
 // const encryptedStr = encryption(str);
 // console.log(encryptedStr);
+
+// 23. Sub string exp:- //const str = "prakash_sakari"; -> p, pr, pra, prak, ra, Įra
+
+// function subStringCombinations(str) {
+//   let line = "";
+
+//   for (let i = 0; i < str.length; i++) {
+//     for (let j = i + 1; j <= str.length; j++) {
+//       console.log(str.slice(i, j));
+
+//     }
+//     break
+//   }
+// }
+
+// const str = "Sourav";
+// const strCombinations = subStringCombinations(str);
+// console.log(strCombinations);
+
+// 24. Odd to even vice vers
+
+// function oddToEvenViceVersa(arr){
+
+//     const result = arr.map((el) => el % 2 === 0 ? el -1 : el + 1)
+
+//     return result
+// }
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const conversion = oddToEvenViceVersa(arr)
+// console.log(conversion)
+
+// 25. Sum of numbers less than 40
+
+// function sumLessThan40(arr) {
+//   let initialValue = 0;
+
+//   const result = arr.reduce(
+//     (acc, currentValue) => (currentValue < 40 ? acc + currentValue : acc),
+//     initialValue
+//   );
+//   return result;
+// }
+
+// const arr = [10, 17, 61, 54, 44, 32, 39, 23];
+// const sum = sumLessThan40(arr);
+// console.log(sum);
+
+// 26. Return Array of Names From An Object - Chaining Methods
+
+// function filteredSeniorEmployees(employees){
+
+//     const result = employees.filter(emp => emp.numOfYears > 3).map(emp => emp.name)
+
+//     return result
+
+// }
+
+// const employees = [
+//     {
+//         name: "Prakash",
+//         numOfYears: 5
+//     },
+//     {
+//         name: "Ashish",
+//         numOfYears: 3
+//     },
+//     {
+//         name: "Riya",
+//         numOfYears: 1
+//     },
+//     {
+//         name: "Jay",
+//         numOfYears: 1
+//     },
+//     {
+//         name: "Chinmoy",
+//         numOfYears: 5
+//     }
+// ]
+
+// const seniorEmployees = filteredSeniorEmployees(employees)
+// console.log(seniorEmployees)
+
+/**
+* 27.  Given an array write a function that returns an object with sum of even and odd numbers
+* arr= [1, 2, 3, 4, 5, 6]
+* OUTPUT = {even: 12, odd: 9}
+
+*/
+
+// function sumEvenAndOdd(arr) {
+//   const result = arr.reduce(
+//     (acc, curr) =>
+//       curr % 2 === 0
+//         ? { ...acc, even: acc.even + curr }
+//         : { ...acc, odd: acc.odd + curr },
+//     { even: 0, odd: 0 }
+//   );
+
+//   return result
+// }
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// const sumOddEven = sumEvenAndOdd(arr);
+// console.log(sumOddEven);
+
+// 28.Find Average Age of Family Members
+
+// function calculateAge(familyMembers) {
+//   const totalAge = familyMembers.reduce((acc, cur) => acc + cur.age, 0);
+
+//   return totalAge / familyMembers.length;
+// }
+
+// const familyMembers = [
+//   {
+//     name: "Narsingrao",
+//     age: 56,
+//   },
+//   {
+//     name: "Padma",
+//     age: 52,
+//   },
+//   {
+//     name: "Poonam",
+//     age: 30,
+//   },
+//   {
+//     name: "Prakash",
+//     age: 27,
+//   },
+//   {
+//     name: "Ashish",
+//     age: 50,
+//   },
+// ];
+
+// const averageAgeOfFamily = calculateAge(familyMembers);
+// console.log(averageAgeOfFamily);
+
+
+// 29. 
+/*
+Count occurence of distinct elements
+Output: {a:2, b:2,c:2,d:1,e:1,f:1}
+*/
+
+
+
+function countOccurence(arr){
+    
+
+}
+
+const arr = [
+"a", "b", "c",
+"c", "d", "e",
+"b", "f", "a"
+]
+
+const occurence = countOccurence(arr)
+console.log(arr)
