@@ -5,24 +5,24 @@ If p does not exist in s then -1 will be returned.
 
 */
 
-// function findPatterns(s, p) {
-//   let flag = false;
-//   let i, j;
+function findPatterns(s, p) {
+  let flag = false;
+  let i, j;
 
-//   for (i = 0; i < s.length; i++) {
-//     for (j = 0; j < p.length; j++) {
-//       if (s[i + j] !== p[j]) {
-//         break;
-//       }
-//     }
+  for (i = 0; i < s.length; i++) {
+    for (j = 0; j < p.length; j++) {
+      if (s[i + j] !== p[j]) {
+        break;
+      }
+    }
 
-//     if (j >= p.length) {
-//       break;
-//     }
-//   }
+    if (j >= p.length) {
+      break;
+    }
+  }
 
-//   return i;
-// }
+  return i;
+}
 
 // let s = "Hello";
 // let p = "llo";
@@ -32,21 +32,21 @@ If p does not exist in s then -1 will be returned.
 
 // 2. Prime Factorization
 
-// function primeFactors(n) {
-//   let smallestPrimeNo = 2,
-//     factors = [];
+function primeFactors(n) {
+  let smallestPrimeNo = 2,
+    factors = [];
 
-//   while (n > 1) {
-//     if (n % smallestPrimeNo === 0) {
-//       factors.push(smallestPrimeNo);
-//       n = n / smallestPrimeNo;
-//     } else {
-//       smallestPrimeNo++;
-//     }
-//   }
+  while (n > 1) {
+    if (n % smallestPrimeNo === 0) {
+      factors.push(smallestPrimeNo);
+      n = n / smallestPrimeNo;
+    } else {
+      smallestPrimeNo++;
+    }
+  }
 
-//   return factors;
-// }
+  return factors;
+}
 
 // let n = 100;
 // const factors = primeFactors(n);
@@ -55,16 +55,16 @@ If p does not exist in s then -1 will be returned.
 
 // 3. Anagram strings
 
-// function anagramString(str1, str2) {
-//   let str1_sort = str1.split("").sort().join(""),
-//     str2_sort = str2.split("").sort().join("");
+function anagramString(str1, str2) {
+  let str1_sort = str1.split("").sort().join(""),
+    str2_sort = str2.split("").sort().join("");
 
-//     if(str1_sort === str2_sort){
-//         return true
-//     }else{
-//         return false
-//     }
-// }
+    if(str1_sort === str2_sort){
+        return true
+    }else{
+        return false
+    }
+}
 
 // let str1 = "geeksforgeeks",
 //   str2 = "forgeeksgeeks";
@@ -72,19 +72,19 @@ If p does not exist in s then -1 will be returned.
 // console.log(findAnagram);
 
 // 4. Find one extra character
-// let s1 = "abcd", s2 = "badce", s1_sum = 0, s2_sum = 0
+let s1 = "abcd", s2 = "badce", s1_sum = 0, s2_sum = 0
 
-// for(a of s1){
-//     s1_sum += a.charCodeAt()
+for(a of s1){
+    s1_sum += a.charCodeAt()
 
-// }
+}
 
-// for(a of s2){
-//     s2_sum += a.charCodeAt()
+for(a of s2){
+    s2_sum += a.charCodeAt()
 
-// }
+}
 
-// let subExtraChar = s2_sum - s1_sum
+let subExtraChar = s2_sum - s1_sum
 
 // console.log(subExtraChar)
 
@@ -92,43 +92,43 @@ If p does not exist in s then -1 will be returned.
 
 // 5. Print alphabets
 
-// function printAlphabets(c1, c2) {
+function printAlphabets(c1, c2) {
 //   // convert inputs to ascii code
 //   // initiate a loop based on ascii code
 //   // convert ascii code to character on each iteration
 
-//   let c1_ascii = c1.charCodeAt();
-//   let c2_ascii = c2.charCodeAt();
-//   let alphabets = [];
+  let c1_ascii = c1.charCodeAt();
+  let c2_ascii = c2.charCodeAt();
+  let alphabets = [];
 
-//   for (c1_ascii; c1_ascii <= c2_ascii; c1_ascii++) {
-//     alphabets.push(String.fromCharCode(c1_ascii));
-//   }
+  for (c1_ascii; c1_ascii <= c2_ascii; c1_ascii++) {
+    alphabets.push(String.fromCharCode(c1_ascii));
+  }
 
-//   return alphabets;
-// }
+  return alphabets;
+}
 
-// let c1 = "a",
-//   c2 = "z";
+let c1 = "a",
+  c2 = "z";
 
 // const alphabets = printAlphabets(c1, c2);
 // console.log(alphabets.join(" "));
 
 // 6. Binary to decimal
 
-// function binaryToDecimal(n) {
-//   let sum = 0,
-//     power = 0,
-//     result;
+function binaryToDecimal(n) {
+  let sum = 0,
+    power = 0,
+    result;
 
-//   for (let i = n.length - 1; i >= 0; i--) {
-//     result = 2 ** power * Number(n[i]);
-//     sum += result;
-//     power++;
-//   }
+  for (let i = n.length - 1; i >= 0; i--) {
+    result = 2 ** power * Number(n[i]);
+    sum += result;
+    power++;
+  }
 
-//   return sum;
-// }
+  return sum;
+}
 
 // let n = 101010;
 // n = Array.from(String(n));
@@ -138,31 +138,31 @@ If p does not exist in s then -1 will be returned.
 
 // 7. Decimal to Binary
 
-// function decimalToBinary(n) {
-//   let binaryNumber = [];
+function decimalToBinary(n) {
+  let binaryNumber = [];
 
-//   while (n > 0) {
-//     binaryNumber.push(n % 2);
-//     n = Math.floor(n / 2);
-//   }
+  while (n > 0) {
+    binaryNumber.push(n % 2);
+    n = Math.floor(n / 2);
+  }
 
-//   return binaryNumber.reverse()
-// }
+  return binaryNumber.reverse()
+}
 
 // let n = 13;
 // const numberInBinary = decimalToBinary(n);
 // console.log(numberInBinary.join(""));
 
 // 8. Substring
-// function subString(str, l, r) {
-//   let subSt = [];
+function subString(str, l, r) {
+  let subSt = [];
 
-//   for (l; l <= r; l++) {
-//     subSt.push(str[l]);
-//   }
+  for (l; l <= r; l++) {
+    subSt.push(str[l]);
+  }
 
-//   return subSt;
-// }
+  return subSt;
+}
 
 // const str = "cdbkdub";
 
@@ -181,22 +181,22 @@ The function returns an integer denoting the first occurrence of the string x in
 
 */
 
-// function strstr(s, x) {
-//   let i, j;
+function strstr(s, x) {
+  let i, j;
 
-//   for (i = 0; i < s.length; i++) {
-//     for (j = 0; j < x.length; j++) {
-//       if (s[i + j] !== x[j]) break;
-//     }
+  for (i = 0; i < s.length; i++) {
+    for (j = 0; j < x.length; j++) {
+      if (s[i + j] !== x[j]) break;
+    }
 
-//     if (j === x.length) break;
-//   }
-//   if (j == x.length) {
-//     return i;
-//   } else {
-//     return -1;
-//   }
-// }
+    if (j === x.length) break;
+  }
+  if (j == x.length) {
+    return i;
+  } else {
+    return -1;
+  }
+}
 
 // let s = "GeeksForGeeks",
 //   x = "For";
@@ -205,16 +205,16 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 10. Reverse of a string
 
-// function reverseStr(str){
-//     let revArr = []
+function reverseStr(str){
+    let revArr = []
 
-//     for(let i = str.length-1; i >= 0; i--){
-//         revArr.push(str[i])
-//     }
+    for(let i = str.length-1; i >= 0; i--){
+        revArr.push(str[i])
+    }
 
-//     return revArr
+    return revArr
 
-// }
+}
 
 // const str = "Hello"
 // const afterReverse = reverseStr(str)
@@ -222,21 +222,21 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 11. Pangram Checking - A panagram contains all the letters of english alphabet at least once.
 
-// function panagram(str) {
-//   let alphabets = [];
-//   for (let i = 65; i <= 90; i++) {
-//     alphabets.push(String.fromCharCode(i));
-//   }
+function panagram(str) {
+  let alphabets = [];
+  for (let i = 65; i <= 90; i++) {
+    alphabets.push(String.fromCharCode(i));
+  }
 
-//   for (let i = 97; i <= 122; i++) {
-//     alphabets.push(String.fromCharCode(i));
-//   }
+  for (let i = 97; i <= 122; i++) {
+    alphabets.push(String.fromCharCode(i));
+  }
 
-//   alphabets = alphabets.join("")
-//   console.log(alphabets)
+  alphabets = alphabets.join("")
+  console.log(alphabets)
 
-//   return str.includes(alphabets);
-// }
+  return str.includes(alphabets);
+}
 
 // const str = "Thequickbrownfoxjumpsoverthelazydog";
 // const pangramCheck = panagram(str);
@@ -244,30 +244,30 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 12. Count Words in String
 
-// const str = "Geeks Geeks Geeks"
-// let count = 1
+const str = "Geeks Geeks Geeks"
+let count = 1
 
-// for(let i = 0; i < str.length; i++){
-//     if(str[i] == " "){
-//         count++
-//     }
+for(let i = 0; i < str.length; i++){
+    if(str[i] == " "){
+        count++
+    }
 
-// }
+}
 
 // console.log(count)
 
 // 13. Palindrome String
 
-// function isPalindrome(str){
-//     let reverseStr = str.split("").reverse().join("")
+function isPalindrome(str){
+    let reverseStr = str.split("").reverse().join("")
 
-//     if(str === reverseStr){
-//         return 1
-//     } else{
-//         return 0
-//     }
+    if(str === reverseStr){
+        return 1
+    } else{
+        return 0
+    }
 
-// }
+}
 
 // let str = "abba"
 
@@ -276,11 +276,11 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 14. Slice The String
 
-// function sliceTheString(str){
-//     const sliceStr = str.split("").slice(1, -1).join("")
-//     return sliceStr
+function sliceTheString(str){
+    const sliceStr = str.split("").slice(1, -1).join("")
+    return sliceStr
 
-// }
+}
 
 // let str = "World"
 // const slice = sliceTheString(str)
@@ -288,15 +288,15 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 15. Check if array is sorted
 
-// function arraySortedOrNot(arr) {
-//   for (let i = 1; i < arr.length; i++) {
-//     if (arr[i - 1] > arr[i]) {
-//       return false;
-//     }
-//   }
+function arraySortedOrNot(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i - 1] > arr[i]) {
+      return false;
+    }
+  }
 
-//   return true;
-// }
+  return true;
+}
 
 // const arr = [10, 20, 30, 40, 50];
 // const isArraySorted = arraySortedOrNot(arr);
@@ -304,15 +304,15 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 16. Search element in an array
 
-// function searchElement(arr, x) {
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === x) {
-//       return i;
-//     }
-//   }
+function searchElement(arr, x) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === x) {
+      return i;
+    }
+  }
 
-//   return -1;
-// }
+  return -1;
+}
 
 // const arr = [1, 2, 3, 4, 5, 6];
 // const x = 5;
@@ -321,17 +321,17 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 17. Count the Zeros
 
-// function countTheZeros(arr) {
-//   let count = 0;
+function countTheZeros(arr) {
+  let count = 0;
 
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === 0) {
-//       count += 1;
-//     }
-//   }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      count += 1;
+    }
+  }
 
-//   return count;
-// }
+  return count;
+}
 
 // const arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0];
 // const totalZeros = countTheZeros(arr);
@@ -339,21 +339,21 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 18. Average
 
-// function averageOfNumbers(arr) {
-//   let sum = 0,
-//     count = 0,
-//     average;
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > 0) {
-//       sum += arr[i];
-//       count += 1;
-//     }
-//   }
+function averageOfNumbers(arr) {
+  let sum = 0,
+    count = 0,
+    average;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+      count += 1;
+    }
+  }
 
-//   average = count === 0 ? 0 : Math.floor(sum / count);
+  average = count === 0 ? 0 : Math.floor(sum / count);
 
-//   return average;
-// }
+  return average;
+}
 
 // const arr = [-12, 8, -7, 6, 12, -9, 14];
 // const average = averageOfNumbers(arr);
@@ -361,17 +361,17 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 19. Largest element in Array
 
-// function largestElement(arr) {
-//   let max = 0;
+function largestElement(arr) {
+  let max = 0;
 
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > max) {
-//       max = arr[i];
-//     }
-//   }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
 
-//   return max;
-// }
+  return max;
+}
 
 // const arr = [1, 2, 0, 13, 3, 2, 4, 5];
 
@@ -380,29 +380,29 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 20. Remove vowels from String
 
-// function removeVowels(string) {
-//   const vowels = ["a", "e", "i", "o", "u"];
-//   let result = "";
+function removeVowels(string) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let result = "";
 
-//   for (char of string) {
-//     if (!vowels.includes(char.toLowerCase())) {
-//       result += char;
-//     }
-//   }
+  for (char of string) {
+    if (!vowels.includes(char.toLowerCase())) {
+      result += char;
+    }
+  }
 
-//   return result;
-// }
+  return result;
+}
 // const string = "The quick browm fox jumps over the lazy dog";
 // const afterRemovingString = removeVowels(string);
 // console.log(afterRemovingString);
 
 // 21. Mask the last 4 characters with #
 
-// function maskTheCharacter(str, digitsToMask) {
-//   const hash = "#".repeat(digitsToMask);
-//   str = str.slice(0, -digitsToMask) + hash;
-//   return str;
-// }
+function maskTheCharacter(str, digitsToMask) {
+  const hash = "#".repeat(digitsToMask);
+  str = str.slice(0, -digitsToMask) + hash;
+  return str;
+}
 
 // const str = "123456789987654321";
 // const digitsToMask = 4;
@@ -411,17 +411,17 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 22. Generate secret code from a string
 
-// function encryption(str) {
-//   let charToAscii,
+function encryption(str) {
+  let charToAscii,
 
-//     finalStr = "";
-//   for (char of str) {
-//     charToAscii = char.charCodeAt() + 2;
-//     finalStr += String.fromCharCode(charToAscii);
-//   }
+    finalStr = "";
+  for (char of str) {
+    charToAscii = char.charCodeAt() + 2;
+    finalStr += String.fromCharCode(charToAscii);
+  }
 
-//   return finalStr
-// }
+  return finalStr
+}
 
 // const str = "prakash";
 // const encryptedStr = encryption(str);
@@ -429,30 +429,30 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 23. Sub string exp:- //const str = "prakash_sakari"; -> p, pr, pra, prak, ra, Įra
 
-// function subStringCombinations(str) {
-//   let line = "";
+function subStringCombinations(str) {
+  let line = "";
 
-//   for (let i = 0; i < str.length; i++) {
-//     for (let j = i + 1; j <= str.length; j++) {
-//       console.log(str.slice(i, j));
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j <= str.length; j++) {
+      console.log(str.slice(i, j));
 
-//     }
-//     break
-//   }
-// }
+    }
+    break
+  }
+}
 
 // const str = "Sourav";
 // const strCombinations = subStringCombinations(str);
 // console.log(strCombinations);
 
-// 24. Odd to even vice vers
+// 24. Odd to even vice versa
 
-// function oddToEvenViceVersa(arr){
+function oddToEvenViceVersa(arr){
 
-//     const result = arr.map((el) => el % 2 === 0 ? el -1 : el + 1)
+    const result = arr.map((el) => el % 2 === 0 ? el -1 : el + 1)
 
-//     return result
-// }
+    return result
+}
 
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // const conversion = oddToEvenViceVersa(arr)
@@ -460,15 +460,15 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 25. Sum of numbers less than 40
 
-// function sumLessThan40(arr) {
-//   let initialValue = 0;
+function sumLessThan40(arr) {
+  let initialValue = 0;
 
-//   const result = arr.reduce(
-//     (acc, currentValue) => (currentValue < 40 ? acc + currentValue : acc),
-//     initialValue
-//   );
-//   return result;
-// }
+  const result = arr.reduce(
+    (acc, currentValue) => (currentValue < 40 ? acc + currentValue : acc),
+    initialValue
+  );
+  return result;
+}
 
 // const arr = [10, 17, 61, 54, 44, 32, 39, 23];
 // const sum = sumLessThan40(arr);
@@ -476,13 +476,13 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 26. Return Array of Names From An Object - Chaining Methods
 
-// function filteredSeniorEmployees(employees){
+function filteredSeniorEmployees(employees){
 
-//     const result = employees.filter(emp => emp.numOfYears > 3).map(emp => emp.name)
+    const result = employees.filter(emp => emp.numOfYears > 3).map(emp => emp.name)
 
-//     return result
+    return result
 
-// }
+}
 
 // const employees = [
 //     {
@@ -517,17 +517,17 @@ The function returns an integer denoting the first occurrence of the string x in
 
 */
 
-// function sumEvenAndOdd(arr) {
-//   const result = arr.reduce(
-//     (acc, curr) =>
-//       curr % 2 === 0
-//         ? { ...acc, even: acc.even + curr }
-//         : { ...acc, odd: acc.odd + curr },
-//     { even: 0, odd: 0 }
-//   );
+function sumEvenAndOdd(arr) {
+  const result = arr.reduce(
+    (acc, curr) =>
+      curr % 2 === 0
+        ? { ...acc, even: acc.even + curr }
+        : { ...acc, odd: acc.odd + curr },
+    { even: 0, odd: 0 }
+  );
 
-//   return result
-// }
+  return result
+}
 
 // const arr = [1, 2, 3, 4, 5, 6];
 // const sumOddEven = sumEvenAndOdd(arr);
@@ -535,57 +535,90 @@ The function returns an integer denoting the first occurrence of the string x in
 
 // 28.Find Average Age of Family Members
 
-// function calculateAge(familyMembers) {
-//   const totalAge = familyMembers.reduce((acc, cur) => acc + cur.age, 0);
+function calculateAge(familyMembers) {
+  const totalAge = familyMembers.reduce((acc, cur) => acc + cur.age, 0);
 
-//   return totalAge / familyMembers.length;
-// }
+  return totalAge / familyMembers.length;
+}
 
-// const familyMembers = [
-//   {
-//     name: "Narsingrao",
-//     age: 56,
-//   },
-//   {
-//     name: "Padma",
-//     age: 52,
-//   },
-//   {
-//     name: "Poonam",
-//     age: 30,
-//   },
-//   {
-//     name: "Prakash",
-//     age: 27,
-//   },
-//   {
-//     name: "Ashish",
-//     age: 50,
-//   },
-// ];
+const familyMembers = [
+  {
+    name: "Narsingrao",
+    age: 56,
+  },
+  {
+    name: "Padma",
+    age: 52,
+  },
+  {
+    name: "Poonam",
+    age: 30,
+  },
+  {
+    name: "Prakash",
+    age: 27,
+  },
+  {
+    name: "Ashish",
+    age: 50,
+  },
+];
 
 // const averageAgeOfFamily = calculateAge(familyMembers);
 // console.log(averageAgeOfFamily);
 
 
-// 29. 
+// 29.
 /*
 Count occurence of distinct elements
 Output: {a:2, b:2,c:2,d:1,e:1,f:1}
 */
 
+function countOccurence(arr) {
+    let countDistinctElements = {}; // Use an object to store the counts
 
+    for (let i = 0; i < arr.length; i++) {
+      let element = arr[i];
+      console.log(`Processing element: ${element}`); // Debug log
+      if (countDistinctElements[element]) {
+        countDistinctElements[element] += 1; // Increment the count if the element already exists
+      } else {
+        countDistinctElements[element] = 1; // Initialize the count to 1 if it's the first occurrence
+      }
+      console.log(`Current counts:`, countDistinctElements); // Debug log
+    }
 
-function countOccurence(arr){
-    
-
+    return countDistinctElements; // Return the counts object
 }
 
-const arr = [
-"a", "b", "c",
-"c", "d", "e",
-"b", "f", "a"
-]
+// using reduce method
 
-const occurence = countOccurence(arr)
-console.log(arr)
+function countOccurence(arr) {
+  const result = arr.reduce(
+    (acc, cur) =>
+      cur in acc ? { ...acc, [cur]: acc[cur] + 1 } : { ...acc, [cur]: 1 },
+    {}
+  );
+
+  return result;
+}
+
+const arr = ["a", "b", "c", "c", "d", "e", "b", "f", "a"];
+
+// const occurence = countOccurence(arr);
+// console.log(occurence);
+
+
+
+/*
+* 30.
+
+* Q1: Arrange the words in the sentence in ascending order of their length
+* Input - gfg is a comp science learning platform
+* Output - a is gfg comp science learning platform
+*/
+
+
+
+
+
