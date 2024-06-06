@@ -37,21 +37,35 @@
 
 // 2. Find longest word in a sentence
 
-function findLongestWord(str) {
-  let longestWord = str.split(" ");
-  let max = ""
+// function findLongestWord(str) {
+//   let longestWord = str.split(" ");
+//   let max = ""
 
-  for(let i = 0; i < str.length; i++){
-    if(max.length < longestWord.length){
-        max = longestWord[i]
-    }
+//   for(let i = 0; i < str.length; i++){
+//     if(max.length < longestWord.length){
+//         max = longestWord[i]
+//     }
 
+//   }
+
+//   return max;
+// }
+
+// const str = "I am Sourav Yadav and I am Unstoppable";
+// const longestWord = findLongestWord(str);
+// console.log(longestWord);
+
+// 3. Find reverse of a string without a inbuilt method
+
+function reverseStr(str) {
+  let revStr = "";
+  for (let i = str.length-1; i >= 0; i--) {
+    revStr += str[i];
   }
- 
 
-  return max;
+  return revStr;
 }
 
-const str = "I am Sourav Yadav and I am Unstoppable";
-const longestWord = findLongestWord(str);
-console.log(longestWord);
+const str = "Sourav";
+const reverse = reverseStr(str);
+console.log(reverse);
