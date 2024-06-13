@@ -59,13 +59,62 @@
 
 function reverseStr(str) {
   let revStr = "";
-  for (let i = str.length-1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     revStr += str[i];
   }
 
   return revStr;
 }
 
-const str = "Sourav";
-const reverse = reverseStr(str);
+// const str = "Sourav";
+// const reverse = reverseStr(str);
+// console.log(reverse);
+
+/*
+* 
+
+* Q4: Arrange the words in the sentence in ascending order of their length
+* Input - gfg is a comp science learning platform
+* Output - a is gfg comp science learning platform
+*/
+
+function bubbleSort(str) {
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < str.length - i - 1; j++) {
+      if (str[j].length > str[j + 1].length) {
+        let temp = str[j];
+        str[j] = str[j + 1];
+        str[j + 1] = temp;
+      }
+    }
+  }
+
+  return str;
+}
+
+function arrangeWords(str) {
+  str = str.trim().split(" ");
+
+  // Bubble sort
+  return bubbleSort(str);
+}
+
+// const str = "gfg is a comp science learning platform";
+// const wordsInAscending = arrangeWords(str);
+// console.log(wordsInAscending);
+
+// 5. Reverse of a words of a string without changing their order
+
+function reverseWords(str) {
+  let arrOfWords = str.split(" ");
+
+  const reversedArrOfWords = arrOfWords.map((word) =>
+    word.split("").reverse().join("")
+  );
+
+  return reversedArrOfWords.join(" ");
+}
+
+const str = "react is a library";
+const reverse = reverseWords(str);
 console.log(reverse);
