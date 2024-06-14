@@ -163,6 +163,6 @@ function getNumberWithMaxFrequency(arr) {
   return maxKey;
 }
 
-const arr = [1, 2, 3, 4, 5, 4, 3, 4, 3, 2, 1, 6, 7, 5, 5];
-const frequency = getNumberWithMaxFrequency(arr);
-console.log(frequency);
+// const arr = [1, 2, 3, 4, 5, 4, 3, 4, 3, 2, 1, 6, 7, 5, 5];
+// const frequency = getNumberWithMaxFrequency(arr);
+// console.log(frequency);
