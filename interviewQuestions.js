@@ -115,6 +115,54 @@ function reverseWords(str) {
   return reversedArrOfWords.join(" ");
 }
 
-const str = "react is a library";
-const reverse = reverseWords(str);
-console.log(reverse);
+// const str = "react is a library";
+// const reverse = reverseWords(str);
+// console.log(reverse);
+
+/* Most important question
+ * 6. Count frequency of all numbers in an array, return the
+ * number with the max frequency, if 2 or more numbers have
+ * the same max freq then return the number with highest number
+ */
+
+function getNumberWithMaxFrequency(arr) {
+  let maxCount = 0,
+    maxKey = 0;
+  let arrOfMaxFreqKeys = [];
+
+  // Count frquency of all the numbers
+  const numberFreqObj = arr.reduce(
+    (acc, cur) =>
+      cur in acc ? { ...acc, [cur]: acc[cur] + 1 } : { ...acc, [cur]: 1 },
+    {}
+  );
+
+  // highest frequency
+  const arrOfKeyValue = Object.entries(numberFreqObj);
+
+  for (let [_, value] of arrOfKeyValue) {
+    if (maxCount < value) {
+      maxCount = value;
+    }
+  }
+
+  // Collect the numbers with highest frquency
+  for (let [key, value] of arrOfKeyValue) {
+    if (maxCount === value) {
+      arrOfMaxFreqKeys = [...arrOfMaxFreqKeys, key];
+    }
+  }
+
+  // Determine the largest number from among frequencies
+  for (let key of arrOfMaxFreqKeys) {
+    if (maxKey < key) {
+      maxKey = key;
+    }
+  }
+
+  return maxKey;
+}
+
+const arr = [1, 2, 3, 4, 5, 4, 3, 4, 3, 2, 1, 6, 7, 5, 5];
+const frequency = getNumberWithMaxFrequency(arr);
+console.log(frequency);
