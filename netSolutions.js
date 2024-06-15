@@ -72,6 +72,73 @@ function productOfArrElements(arr) {
   }
 }
 
-const arr = [-1, -2, -3, -4, 3, 2, 1];
-const result = productOfArrElements(arr);
+// const arr = [-1, -2, -3, -4, 3, 2, 1];
+// const result = productOfArrElements(arr);
+// console.log(result);
+
+// Q6. Write program to find the nth largest number in the array
+
+function nthLargestElement(arr, nthEle) {
+  let sortArr = arr.sort((a, b) => b - a);
+
+  return sortArr[nthEle - 1];
+}
+
+// let arr = [66, 44, 55, 88, 7, 9, 3, 22, 322];
+// const nthEle = 3
+// const largest = nthLargestElement(arr, nthEle);
+// console.log(largest);
+
+// 7. Write a program to find square root of an integer without using in-built functions
+
+function squareRoot(n) {
+  let left = 0,
+    right = n,
+    result = 0;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (mid * mid === n) {
+      return mid;
+    } else if (mid * mid < n) {
+      left = mid + 1;
+      result = mid;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return result;
+}
+
+// const n = 64;
+// const result = squareRoot(n);
+// console.log(result);
+
+//  8. Write program to find high frequency character in the given string
+
+function highestFrequencyCharacter(str) {
+  str = str.split("");
+  const frequencyMap = str.reduce(
+    (acc, cur) =>
+      cur in acc ? { ...acc, [cur]: acc[cur] + 1 } : { ...acc, [cur]: 1 },
+    {}
+  );
+
+  let highestFreq = 0,
+    highestFreqChar = null;
+
+  for (let char in frequencyMap) {
+    if (frequencyMap[char] > highestFreq) {
+      highestFreq = frequencyMap[char];
+      highestFreqChar = char;
+    }
+  }
+
+  return highestFreqChar;
+}
+
+const str = "hello";
+const result = highestFrequencyCharacter(str);
 console.log(result);
