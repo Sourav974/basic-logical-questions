@@ -139,6 +139,101 @@ function highestFrequencyCharacter(str) {
   return highestFreqChar;
 }
 
-const str = "hello";
-const result = highestFrequencyCharacter(str);
-console.log(result);
+// const str = "hello";
+// const result = highestFrequencyCharacter(str);
+// console.log(result);
+
+// 9. Write a program to find the sum of odd numbers from the given array
+
+function oddSum(arr) {
+  if (arr.length === 0) return "Array cannot be empty";
+
+  let sum = 0;
+  let flag = true;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      flag = false;
+      sum += arr[i];
+    }
+  }
+
+  if (flag) {
+    return "There's no odd numbers in the array";
+  } else {
+    return sum;
+  }
+}
+
+// const arr = [4, 7, 8, 99, 6, 7, 889, 9, 334, 43];
+
+// const result = oddSum(arr);
+// console.log("Result:- ", result);
+
+// 10. Write program to calculate the power m(n)
+
+function power(n, pow) {
+  // Base case: any number to the power of 0 is 1
+  if (pow === 0) return 1;
+
+  // Handle negative exponents by computing the positive exponent and then taking the reciprocal
+  if (pow < 0) return 1 / power(n, -pow);
+
+  // Calculate power for positive exponents
+  let result = 1;
+  for (let i = 0; i < pow; i++) {
+    result *= n;
+  }
+
+  return result;
+}
+
+// const n = 2,
+//   pow = 0;
+
+// const result = power(n, pow);
+// console.log("result:- ", result);
+
+// 11. Write a program to find the factorial of given number n
+
+function factorial(num) {
+  if (num < 0) return "Not a valid no. for factorial!";
+
+  let fact = 1;
+
+  for (let i = 1; i <= num; i++) {
+    fact *= i;
+  }
+
+  return fact;
+}
+
+// const num = 5
+// const result = factorial(num)
+// console.log("result:- ", result)
+
+// 12. Find duplicate number in two arrays
+
+function findDuplicates(arr1, arr2) {
+  // Edge case: If either array is empty, return an empty array as there can be no duplicates.
+  if (arr1.length === 0 || arr2.length === 0) return [];
+
+  // Convert the first array to a set for efficient lookup
+  const set1 = new Set(arr1);
+  // Initialize an empty set to store duplicates
+  const duplicates = new Set();
+
+  // Iterate through the second array
+  arr2.forEach((element) => {
+    // If an element is found in set1, add it to the duplicates set
+    if (set1.has(element)) duplicates.add(element);
+  });
+
+  // Convert the set of duplicates to an array and return it
+  return Array.from(duplicates);
+}
+
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [2, 3, 1, 0, 5];
+// const duplicates = findDuplicates(arr1, arr2);
+// console.log("duplicates:- ", duplicates);
